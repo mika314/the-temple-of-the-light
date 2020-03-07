@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Terrain.glb" type="PackedScene" id=1]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( -51.5669, -3.4001, -58.2933, -51.5669, -3.4001, 57.0256, -51.1665, -1.00404, -57.8929, -51.1665, -1.00404, 56.6252, -19.5315, -0.197737, -4.62983, -19.5315, -0.197737, 2.56067, 16.479, -0.315206, -3.59401, 17.9285, -0.319683, 0.0961354, 63.3512, -1.00404, -57.8929, 63.3512, -1.00404, 56.6252, 63.7516, -3.4001, -58.2933, 63.7516, -3.4001, 57.0256 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 6.28724, 4.39297, 1 )
+
+[sub_resource type="ConvexPolygonShape" id=3]
+points = PoolVector3Array( 10.8983, -0.196326, -2.23503, 10.8983, -0.196326, 0.166505, 10.8983, 7.81037, -2.23503, 10.8983, 7.81037, 0.166505, 12.5004, -0.196326, -3.83653, 12.5004, -0.196326, 1.768, 12.5004, 7.81037, -3.83653, 12.5004, 7.81037, 1.768, 14.1017, -0.196326, 2.56945, 14.1017, 7.81037, 2.56945, 14.902, 7.81037, -4.63798, 15.7015, -0.196326, -4.63798, 16.5026, -0.196326, 2.56945, 16.5026, 7.81037, 2.56945, 17.3029, 7.81037, -3.83653, 18.1039, -0.196326, -3.03578, 18.1039, -0.196326, 1.768, 18.1039, 7.81037, 1.768, 18.9058, -0.196326, -1.43358, 18.9058, -0.196326, 0.166505, 18.9058, 7.81037, -1.43358, 18.9058, 7.81037, 0.166505 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 1.12646, 2.88335, 1 )
+
+[node name="Terrain" instance=ExtResource( 1 )]
+
+[node name="StaticBody" type="StaticBody" parent="Terrain" index="0"]
+
+[node name="CollisionShape1" type="CollisionShape" parent="Terrain/StaticBody" index="0"]
+shape = SubResource( 1 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Terrain/StaticBody" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.35435, 3.55597, -1.02384 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="Terrain/StaticBody" index="2"]
+shape = SubResource( 3 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="Terrain/StaticBody" index="3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.6717, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape5" type="CollisionShape" parent="Terrain/StaticBody" index="4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.46842, 3.31458, -1.05622 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape6" type="CollisionShape" parent="Terrain/StaticBody" index="5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.07937, 5.77123, -1.51312 )
+shape = SubResource( 4 )
