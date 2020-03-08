@@ -28,6 +28,12 @@ func _process(delta):
 		dir.z += 1
 	if Input.is_action_pressed("ui_up"):
 		dir.z -= 1
+	if Input.is_action_just_pressed("ui_cancel"):
+		$Lamp/Camera/EscMenu.visible = !$Lamp/Camera/EscMenu.visible
+		if $Lamp/Camera/EscMenu.visible:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		else:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	dir = dir.rotated(Vector3(0, 1, 0), rotation.y)
 	dir = dir * CAM_SPEED
 	vertVelocity -= 9.81 * delta
@@ -43,11 +49,6 @@ func _process(delta):
 			if dist < PLAYER_ATTACK_DIST * PLAYER_ATTACK_DIST:
 				monster.attack(2)
 		monsters.clear()
-	if Input.is_action_just_pressed("mouse_mode"):
-		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		else:
-			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 var MOUSE_SENSITIVITY = 0.07
 
@@ -86,3 +87,6 @@ func _on_Anim_animation_finished(anim_name):
 		# warning-ignore:return_value_discarded
 		get_tree().change_scene("res://Menu.tscn")
 
+func _on_EscMenu_quit():
+	# warning-ignore:return_value_discarded
+	get_tree().change_scene("res://Menu.tscn")

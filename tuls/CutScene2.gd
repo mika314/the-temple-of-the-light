@@ -18,6 +18,7 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "sun goes down":
 		$AudioStreamPlayer2.play()
 	else:
+# warning-ignore:return_value_discarded
 		get_tree().change_scene("res://GamePlay.tscn")
 
 func _on_AudioStreamPlayer_finished():
