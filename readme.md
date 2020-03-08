@@ -86,20 +86,20 @@ The game
     - [x] bird
     - [x] bear
     - [x] mouse
-  - attack sound
-    - [ ] bird
-    - [ ] bear
-    - [ ] mouse
   - [x] Player Health
   - [x] Monster Health
 
 5pm - 7pm
+  - attack sound
+    - [x] bird
+    - [x] bear
+    - [x] mouse
 - Temple of light
    - 3 puzzles
-     - [ ] maze
-     - [ ] lock
+     - [x] maze
 
 7pm - 9pm
+     - [ ] lock
      - [ ] another parkour but you have to figure out buttons combination
   - [ ] end game
 

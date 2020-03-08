@@ -37,7 +37,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("jump") && vertVelocity <= 0.2 && vertVelocity >= -0.2:
 		vertVelocity += 4
 	if Input.is_action_just_pressed("attack"):
-		$Lamp/Dagger/AnimationPlayer.play("Attack")
+		$Lamp/Dagger/AnimationPlayer.play("Attack")		
 		for monster in monsters:
 			var dist = monsters[monster]
 			if dist < PLAYER_ATTACK_DIST * PLAYER_ATTACK_DIST:
@@ -68,6 +68,7 @@ func _input(event):
 
 func attack(power):
 	health -= power
+	$AudioHurt.play()
 
 func report(monster, dist):
 	monsters[monster] = dist

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bear_hurt.wav-36539990f1eb27bae390b9701235bfe2.sample"
+
+[deps]
+
+source_file="res://bear_hurt.wav"
+dest_files=[ "res://.import/bear_hurt.wav-36539990f1eb27bae390b9701235bfe2.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

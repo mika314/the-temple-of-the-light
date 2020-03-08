@@ -15,10 +15,15 @@ export var ATTACK_POWER: float = 1
 
 export var health: float = 100
 
+var isAlive = true
+
 # warning-ignore:unused_argument
 func _process(delta):
 	if health < 0:
 		rotation.z = PI * 4 / 7
+		if isAlive:
+			$AudioDeath.play()
+		isAlive = false
 		return
 	var player = $"../Player"
 	var dist = translation.distance_squared_to(player.translation)
@@ -27,6 +32,7 @@ func _process(delta):
 		if dist < ATTACK_DISTANCE * ATTACK_DISTANCE:
 			if randi() % 100 == 0:
 				$Anim.play("attack")
+				$AudioAttack.play()
 				player.attack(ATTACK_POWER)
 		else:
 			var dir = Vector3(0, -1, -1)
@@ -72,4 +78,5 @@ func _process(delta):
 func attack(power):
 	health -= power
 	$Anim.play("hurt")
+	$AudioHurt.play()
 	print(self, health)
