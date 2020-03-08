@@ -39,8 +39,9 @@ func _process(delta):
 	vertVelocity -= 9.81 * delta
 	dir.y = vertVelocity
 	var tmp = move_and_slide(dir)
-	vertVelocity = tmp.y
-	if Input.is_action_just_pressed("jump") && vertVelocity <= 0.2 && vertVelocity >= -0.2:
+	if tmp.y > vertVelocity && tmp.y < 0:
+		vertVelocity = tmp.y
+	if Input.is_action_just_pressed("jump") && vertVelocity <= 0.2 && vertVelocity >= -0.4:
 		vertVelocity += 4
 	if Input.is_action_just_pressed("attack"):
 		$Lamp/Dagger/AnimationPlayer.play("Attack")		
