@@ -243,5 +243,24 @@ ATTACK_POWER = 20.0
 
 [node name="Lock" parent="." instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -123.494, 0.140009, -75.5609 )
+
+[node name="Bear2" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -111.362, 0.44566, -57.1486 )
+ATTACK_POWER = 20.0
+
+[node name="Mouse4" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -86.6799, 0.749202, -54.1891 )
+ATTACK_POWER = 3.0
+health = 10.0
+
+[node name="Mouse5" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -85.9954, 0.572829, -55.7172 )
+ATTACK_POWER = 3.0
+health = 10.0
+
+[node name="Mouse6" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -84.9536, 0.457808, -55.235 )
+ATTACK_POWER = 3.0
+health = 10.0
 [connection signal="game_over" from="Terrain" to="Player" method="_on_Terrain_game_over"]
 [connection signal="animation_finished" from="Player/Anim" to="Player" method="_on_Anim_animation_finished"]

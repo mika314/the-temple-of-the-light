@@ -89,6 +89,5 @@ func _on_Button004_pressed():
 # warning-ignore:unused_argument
 func _on_RotAnim_animation_finished(anim_name):
 	is_rot = false
-	print(Gear[0], Gear[1], Gear[2], Gear[3])
 	if Gear[0] == 1 && Gear[1] == 0 && Gear[2] == 3  && Gear[3] == 2:
 		$"Door/AnimDoor".play("Open")

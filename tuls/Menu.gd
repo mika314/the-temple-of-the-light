@@ -6,10 +6,11 @@ func _ready():
 
 var is_hover = false
 
+# warning-ignore:unused_argument
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept") && is_hover:
 		# warning-ignore:return_value_discarded
-		get_tree().change_scene("res://GamePlay.tscn")
+		get_tree().change_scene("res://CutScene2.tscn")
 
 
 func _on_StaticBody_mouse_entered():

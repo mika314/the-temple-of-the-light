@@ -99,7 +99,7 @@ The game
      - [x] maze
 
 7pm - 9pm
-   - [ ] lock - still in-progress
+   - [x] lock - still in-progress
 
 9m - 11pm
 - [x] lock
@@ -129,9 +129,9 @@ The game
 
 8am - 10am 
 - 2 cut scene
-  - [ ] world goes into the darkness
+  - [x] world goes into the darkness
 
-11am - 12noon
+10am - 12noon
   - [ ] father gives the lamp to the kid
 
 12noon - 2pm

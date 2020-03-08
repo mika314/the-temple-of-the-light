@@ -82,4 +82,4 @@ func attack(power):
 	health -= power
 	$Anim.play("hurt")
 	$AudioHurt.play()
-	print(self, health)
+
