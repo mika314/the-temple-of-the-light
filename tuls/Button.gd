@@ -16,6 +16,7 @@ func _process(delta):
 	if dist < BUTTON_PRESS_DIST * BUTTON_PRESS_DIST:
 		if !is_pressed:
 			emit_signal("pressed")
+			$"../AudioLockClick".play()
 		is_pressed = true
 	else:
 		is_pressed = false

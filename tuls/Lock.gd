@@ -91,3 +91,4 @@ func _on_RotAnim_animation_finished(anim_name):
 	is_rot = false
 	if Gear[0] == 1 && Gear[1] == 0 && Gear[2] == 3  && Gear[3] == 2:
 		$"Door/AnimDoor".play("Open")
+		$Door/AudioStreamPlayer3D.play()

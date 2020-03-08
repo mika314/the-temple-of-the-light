@@ -1,8 +1,10 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Lock.glb" type="PackedScene" id=1]
 [ext_resource path="res://Button.gd" type="Script" id=2]
 [ext_resource path="res://Lock.gd" type="Script" id=3]
+[ext_resource path="res://gate.wav" type="AudioStream" id=4]
+[ext_resource path="res://LockClick.wav" type="AudioStream" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Rot12"
@@ -242,6 +244,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=17]
 resource_name = "Open"
+length = 7.0
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:translation")
 tracks/0/interp = 1
@@ -249,7 +252,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector3( -3.48822, 6.5669, 7.57601 ), Vector3( -3.48822, 6.5669, -3.01957 ) ]
@@ -261,7 +264,11 @@ points = PoolVector3Array( -1.99477, -6.4794, -4.41788, -1.99477, 6.4794, -4.417
 [node name="Lock" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
 
-[node name="Gear001" parent="." index="0"]
+[node name="AudioLockClick" type="AudioStreamPlayer3D" parent="." index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.716123, 1.16432, -1.47306 )
+stream = ExtResource( 5 )
+
+[node name="Gear001" parent="." index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.849616, 1.32645, -0.408641 )
 
 [node name="RotAnim" type="AnimationPlayer" parent="Gear001" index="0"]
@@ -270,10 +277,10 @@ anims/Rot23 = SubResource( 2 )
 anims/Rot34 = SubResource( 3 )
 anims/Rot41 = SubResource( 4 )
 
-[node name="GearBox" parent="." index="1"]
+[node name="GearBox" parent="." index="2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.713338, 1.16432, -0.420554 )
 
-[node name="Gear002" parent="." index="2"]
+[node name="Gear002" parent="." index="3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00329155, 1.30409, -0.369506 )
 
 [node name="RotAnim" type="AnimationPlayer" parent="Gear002" index="0"]
@@ -282,7 +289,7 @@ anims/Rot23 = SubResource( 6 )
 anims/Rot34 = SubResource( 7 )
 anims/Rot41 = SubResource( 8 )
 
-[node name="Gear003" parent="." index="3"]
+[node name="Gear003" parent="." index="4"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.854649, 1.30409, -0.381217 )
 
 [node name="RotAnim" type="AnimationPlayer" parent="Gear003" index="0"]
@@ -291,7 +298,7 @@ anims/Rot23 = SubResource( 10 )
 anims/Rot34 = SubResource( 11 )
 anims/Rot41 = SubResource( 12 )
 
-[node name="Gear004" parent="." index="4"]
+[node name="Gear004" parent="." index="5"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.68179, 1.30409, -0.369505 )
 
 [node name="RotAnim" type="AnimationPlayer" parent="Gear004" index="0"]
@@ -300,26 +307,26 @@ anims/Rot23 = SubResource( 14 )
 anims/Rot34 = SubResource( 15 )
 anims/Rot41 = SubResource( 16 )
 
-[node name="Clue" parent="." index="5"]
+[node name="Clue" parent="." index="6"]
 transform = Transform( 0.992711, 0, -0.120518, 0, 1, 0, 0.120518, 0, 0.992711, -2.02115, 1.91917, 1.81748 )
 
-[node name="Button001" parent="." index="6"]
+[node name="Button001" parent="." index="7"]
 transform = Transform( 0.996201, 0, -0.0870862, 0, 1, 0, 0.0870862, 0, 0.996201, -0.862581, 1.19609, -0.253213 )
 script = ExtResource( 2 )
 
-[node name="Button002" parent="." index="7"]
+[node name="Button002" parent="." index="8"]
 transform = Transform( 0.996201, 0, -0.0870862, 0, 1, 0, 0.0870862, 0, 0.996201, 0.00486716, 1.19609, -0.227102 )
 script = ExtResource( 2 )
 
-[node name="Button003" parent="." index="8"]
+[node name="Button003" parent="." index="9"]
 transform = Transform( 0.996201, 0, -0.0870862, 0, 1, 0, 0.0870862, 0, 0.996201, 0.893584, 1.19609, -0.221024 )
 script = ExtResource( 2 )
 
-[node name="Button004" parent="." index="9"]
+[node name="Button004" parent="." index="10"]
 transform = Transform( 0.996201, 0, -0.0870862, 0, 1, 0, 0.0870862, 0, 0.996201, 1.66865, 1.19609, -0.227891 )
 script = ExtResource( 2 )
 
-[node name="Door" parent="." index="10"]
+[node name="Door" parent="." index="11"]
 transform = Transform( 0.99301, 0, -0.118032, 0, 1, 0, 0.118032, 0, 0.99301, -3.48822, 6.5669, 7.57601 )
 
 [node name="AnimDoor" type="AnimationPlayer" parent="Door" index="0"]
@@ -329,6 +336,9 @@ anims/Open = SubResource( 17 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Door/StaticBody" index="0"]
 shape = SubResource( 18 )
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Door" index="2"]
+stream = ExtResource( 4 )
 [connection signal="animation_finished" from="Gear001/RotAnim" to="." method="_on_RotAnim_animation_finished"]
 [connection signal="animation_finished" from="Gear002/RotAnim" to="." method="_on_RotAnim_animation_finished"]
 [connection signal="animation_finished" from="Gear003/RotAnim" to="." method="_on_RotAnim_animation_finished"]

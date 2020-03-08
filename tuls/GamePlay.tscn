@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Lamp.glb" type="PackedScene" id=1]
 [ext_resource path="res://Terrain.tscn" type="PackedScene" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://i_need_umbrella.wav" type="AudioStream" id=15]
 [ext_resource path="res://Umbrella.gd" type="Script" id=16]
 [ext_resource path="res://EscMenu.tscn" type="PackedScene" id=17]
+[ext_resource path="res://heavenly.wav" type="AudioStream" id=18]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 14.949, 6.7213, 1 )
@@ -167,7 +168,7 @@ script = ExtResource( 16 )
 [node name="Terrain" parent="." instance=ExtResource( 2 )]
 
 [node name="Player" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20274, 6.61719 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0267487, 0.20274, 6.59969 )
 script = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Player"]
@@ -209,6 +210,9 @@ stream = ExtResource( 15 )
 anims/Death = SubResource( 4 )
 anims/EndGame = SubResource( 5 )
 anims/Spawn = SubResource( 6 )
+
+[node name="AudioHeavenly" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource( 18 )
 
 [node name="Mouse" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.976692, 0.208052, -5.91975 )

@@ -137,8 +137,9 @@ The game
 12noon - 2pm
 
 - [x] quit on Esc
-- [ ] physics
-- [ ] lamp design
+- [x] physics
+- [x] lamp design
+- [x] parkour is hard
+- [x] sounds for lock
 - [ ] sounds for hurt
-- [ ] sounds for lock
-- [ ] parkour is hard
+
