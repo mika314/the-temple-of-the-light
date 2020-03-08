@@ -1,35 +1,339 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Lock.glb" type="PackedScene" id=1]
+[ext_resource path="res://Button.gd" type="Script" id=2]
+[ext_resource path="res://Lock.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Rot12"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 90 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Rot23"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 90 ), Vector3( 0, 0, 180 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Rot34"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 180 ), Vector3( 0, 0, 270 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Rot41"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 270 ), Vector3( 0, 0, 360 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Rot12"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 90 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Rot23"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 90 ), Vector3( 0, 0, 180 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Rot34"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 180 ), Vector3( 0, 0, 270 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "Rot41"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 270 ), Vector3( 0, 0, 360 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "Rot12"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 90 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "Rot23"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 90 ), Vector3( 0, 0, 180 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "Rot34"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 180 ), Vector3( 0, 0, 270 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "Rot41"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 270 ), Vector3( 0, 0, 360 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 90 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 90 ), Vector3( 0, 0, 180 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 180 ), Vector3( 0, 0, 270 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 270 ), Vector3( 0, 0, 360 ) ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "Open"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -3.48822, 6.5669, 7.57601 ), Vector3( -3.48822, 6.5669, -3.01957 ) ]
+}
+
+[sub_resource type="ConvexPolygonShape" id=18]
+points = PoolVector3Array( -1.99477, -6.4794, -4.41788, -1.99477, 6.4794, -4.41788, -1.23516, -6.54169, -4.61638, -1.23516, 6.54169, -4.61638, -0.932215, -6.60195, 4.77216, -0.932215, 6.60195, 4.77216, 0.166628, -6.5497, -4.77844, 0.166628, 6.5497, -4.77844, 0.166814, -6.55751, 4.73989, 0.166814, 6.55751, 4.73989, 0.937034, -6.48366, -4.73048, 0.937034, 6.48366, -4.73048, 1.56991, -6.54955, 4.57768, 1.56991, 6.54955, 4.57768, 1.98083, -6.36547, 4.29727, 1.98083, 6.36547, 4.29727 )
 
 [node name="Lock" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
 
 [node name="Gear001" parent="." index="0"]
-transform = Transform( 0.996201, 0, -0.0870862, 0, 1, 0, 0.0870862, 0, 0.996201, -0.847236, 1.30409, -0.381016 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.849616, 1.32645, -0.408641 )
+
+[node name="RotAnim" type="AnimationPlayer" parent="Gear001" index="0"]
+anims/Rot12 = SubResource( 1 )
+anims/Rot23 = SubResource( 2 )
+anims/Rot34 = SubResource( 3 )
+anims/Rot41 = SubResource( 4 )
 
 [node name="GearBox" parent="." index="1"]
-transform = Transform( 0.996201, 0, -0.0870862, 0, 1, 0, 0.0870862, 0, 0.996201, -0.713338, 1.16432, -0.420554 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.713338, 1.16432, -0.420554 )
 
 [node name="Gear002" parent="." index="2"]
-transform = Transform( 0.996201, 0, -0.0870862, 0, 1, 0, 0.0870862, 0, 0.996201, -0.00387666, 1.30409, -0.307291 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00329155, 1.30409, -0.369506 )
 
-[node name="Gear004" parent="." index="3"]
-transform = Transform( 0.996201, 0, -0.0870862, 0, 1, 0, 0.0870862, 0, 0.996201, 0.856342, 1.30409, -0.232092 )
+[node name="RotAnim" type="AnimationPlayer" parent="Gear002" index="0"]
+anims/Rot12 = SubResource( 5 )
+anims/Rot23 = SubResource( 6 )
+anims/Rot34 = SubResource( 7 )
+anims/Rot41 = SubResource( 8 )
 
-[node name="Gear005" parent="." index="4"]
-transform = Transform( 0.996201, 0, -0.0870862, 0, 1, 0, 0.0870862, 0, 0.996201, 1.65874, 1.30409, -0.161948 )
+[node name="Gear003" parent="." index="3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.854649, 1.30409, -0.381217 )
+
+[node name="RotAnim" type="AnimationPlayer" parent="Gear003" index="0"]
+anims/Rot12 = SubResource( 9 )
+anims/Rot23 = SubResource( 10 )
+anims/Rot34 = SubResource( 11 )
+anims/Rot41 = SubResource( 12 )
+
+[node name="Gear004" parent="." index="4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.68179, 1.30409, -0.369505 )
+
+[node name="RotAnim" type="AnimationPlayer" parent="Gear004" index="0"]
+anims/Rot12 = SubResource( 13 )
+anims/Rot23 = SubResource( 14 )
+anims/Rot34 = SubResource( 15 )
+anims/Rot41 = SubResource( 16 )
 
 [node name="Clue" parent="." index="5"]
 transform = Transform( 0.992711, 0, -0.120518, 0, 1, 0, 0.120518, 0, 0.992711, -2.02115, 1.91917, 1.81748 )
 
 [node name="Button001" parent="." index="6"]
 transform = Transform( 0.996201, 0, -0.0870862, 0, 1, 0, 0.0870862, 0, 0.996201, -0.862581, 1.19609, -0.253213 )
+script = ExtResource( 2 )
 
 [node name="Button002" parent="." index="7"]
-transform = Transform( 0.996201, 0, -0.0870862, 0, 1, 0, 0.0870862, 0, 0.996201, 0.00486716, 1.19609, -0.177382 )
+transform = Transform( 0.996201, 0, -0.0870862, 0, 1, 0, 0.0870862, 0, 0.996201, 0.00486716, 1.19609, -0.227102 )
+script = ExtResource( 2 )
 
 [node name="Button003" parent="." index="8"]
-transform = Transform( 0.996201, 0, -0.0870862, 0, 1, 0, 0.0870862, 0, 0.996201, 0.893584, 1.19609, -0.0996918 )
+transform = Transform( 0.996201, 0, -0.0870862, 0, 1, 0, 0.0870862, 0, 0.996201, 0.893584, 1.19609, -0.221024 )
+script = ExtResource( 2 )
 
 [node name="Button004" parent="." index="9"]
-transform = Transform( 0.996201, 0, -0.0870862, 0, 1, 0, 0.0870862, 0, 0.996201, 1.66865, 1.19609, -0.0319367 )
+transform = Transform( 0.996201, 0, -0.0870862, 0, 1, 0, 0.0870862, 0, 0.996201, 1.66865, 1.19609, -0.227891 )
+script = ExtResource( 2 )
+
+[node name="Door" parent="." index="10"]
+transform = Transform( 0.99301, 0, -0.118032, 0, 1, 0, 0.118032, 0, 0.99301, -3.48822, 6.5669, 7.57601 )
+
+[node name="AnimDoor" type="AnimationPlayer" parent="Door" index="0"]
+anims/Open = SubResource( 17 )
+
+[node name="StaticBody" type="StaticBody" parent="Door" index="1"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Door/StaticBody" index="0"]
+shape = SubResource( 18 )
+[connection signal="animation_finished" from="Gear001/RotAnim" to="." method="_on_RotAnim_animation_finished"]
+[connection signal="animation_finished" from="Gear002/RotAnim" to="." method="_on_RotAnim_animation_finished"]
+[connection signal="animation_finished" from="Gear003/RotAnim" to="." method="_on_RotAnim_animation_finished"]
+[connection signal="animation_finished" from="Gear004/RotAnim" to="." method="_on_RotAnim_animation_finished"]
+[connection signal="pressed" from="Button001" to="." method="_on_Button001_pressed"]
+[connection signal="pressed" from="Button002" to="." method="_on_Button002_pressed"]
+[connection signal="pressed" from="Button003" to="." method="_on_Button003_pressed"]
+[connection signal="pressed" from="Button004" to="." method="_on_Button004_pressed"]

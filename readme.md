@@ -102,12 +102,12 @@ The game
    - [ ] lock - still in-progress
 
 9m - 11pm
-   - [ ] lock
-   - [ ] another parkour but you have to figure out buttons combination
-- [ ] end game
-- [ ] Rain does not allow to go until you get an umbrella
+- [x] lock
+- [x] another parkour ~but you have to figure out buttons combination~
 
 11m - 1am
+- [ ] end game
+- [ ] Rain does not allow to go until you get an umbrella
 - 3 enemies:
   - bird
     - [x] 3D model

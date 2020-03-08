@@ -59,7 +59,7 @@ transform = Transform( 1, 0, 0, 0, 0.678147, 0.734926, 0, -0.734926, 0.678147, -
 [node name="Terrain" parent="." instance=ExtResource( 2 )]
 
 [node name="Player" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.598778, 0, 5.83336 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -121.064, 0, -69.553 )
 script = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Player"]
@@ -123,4 +123,4 @@ transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -13.225
 ATTACK_POWER = 20.0
 
 [node name="Lock" parent="." instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -123.454, 0.194541, -75.7611 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -123.494, 0.140009, -75.5609 )
