@@ -11,7 +11,7 @@ dest_files=[ "res://.import/Bird.glb-c0aa0a13a5067101ba1bc968916e7d0e.scn" ]
 
 [params]
 
-nodes/root_type="Spatial"
+nodes/root_type="KinematicBody"
 nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""

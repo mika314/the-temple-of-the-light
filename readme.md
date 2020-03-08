@@ -65,16 +65,75 @@ You get in the temple of light. In the telmple of light the ultimater the light 
 Maze in the dark.
 Combination puzzle. You have to find a clue — bird symbol of the wall, mummy, phoenix and fire and sphinx. This a combination. 
 The bird flies into the sphinx, and it is a tumb for the mummy of the ancient king.
-Parkor puzzle, and you have to figure out which button to push and time limit with raizing water.
+Parkour puzzle, and you have to figure out which button to push and time limit with raizing water.
 Then you put the lamp of hope, the phoenix for visual effect. 
 
 The game
-2 cut scene
-3 enemies: bird, mouse, and bear
-3 puzzle
-Parkour
-Lamp
-Dagger
-Rain
-umbrella
+- [x] Lamp
+- [x] Dagger
+- [x] Rain
+- [x] umbrella
+- [x] village
+
+3pm - 5pm
+- [x] fight with monsters
+- monsters AI
+  - movement
+    - two modes
+      - [x] random wondering
+      - [x] attacking
+  - attack animation
+    - [x] bird
+    - [x] bear
+    - [x] mouse
+  - attack sound
+    - [ ] bird
+    - [ ] bear
+    - [ ] mouse
+  - [x] Player Health
+  - [x] Monster Health
+
+5pm - 7pm
+- Temple of light
+   - 3 puzzles
+     - [ ] maze
+     - [ ] lock
+
+7pm - 9pm
+     - [ ] another parkour but you have to figure out buttons combination
+  - [ ] end game
+
+9m - 11pm
+- [ ] Rain does not allow to go until you get an umbrella
+- 3 enemies:
+  - bird
+    - [x] 3D model
+    - [ ] animation
+    - [ ] sound
+  - mouse
+    - [x] 3D model
+    - [ ] animation
+    - [ ] sound
+  - bear
+    - [x] 3D model
+    - [ ] animation
+    - [ ] sound
+
+11m - 1am
+- [ ] menu
+TBD
+1m - 3am
+TBD
+
+3am - 8am sleep
+
+
+8am - 10am 
+- 2 cut scene
+  - [ ] father gives the lamp to the kid
+
+11am - 12noon
+  - [ ] world goes into the darkness
+
+12noon - 2pm
 

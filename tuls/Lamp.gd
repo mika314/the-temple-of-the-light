@@ -4,10 +4,14 @@ extends KinematicBody
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
-const CAM_SPEED = 7
-const FORCE = 0.3
+const CAM_SPEED: float = 7.0
+const FORCE: float = 0.3
 
-var vertVelocity = 0
+var vertVelocity: float = 0
+var health: float = 100
+
+var monsters = {}
+const PLAYER_ATTACK_DIST = 7
 
 # warning-ignore:unused_argument
 func _process(delta):
@@ -31,10 +35,19 @@ func _process(delta):
 	var tmp = move_and_slide(dir)
 	vertVelocity = tmp.y
 	if Input.is_action_just_pressed("jump") && vertVelocity <= 0.2 && vertVelocity >= -0.2:
-		vertVelocity += 10
+		vertVelocity += 4
 	if Input.is_action_just_pressed("attack"):
 		$Lamp/Dagger/AnimationPlayer.play("Attack")
-
+		for monster in monsters:
+			var dist = monsters[monster]
+			if dist < PLAYER_ATTACK_DIST * PLAYER_ATTACK_DIST:
+				monster.attack(2)
+		monsters.clear()
+	if Input.is_action_just_pressed("mouse_mode"):
+		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		else:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 var MOUSE_SENSITIVITY = 0.07
 
@@ -53,3 +66,8 @@ func _input(event):
 			tmpRotation.y += 2 * PI
 		rotation = tmpRotation
 
+func attack(power):
+	health -= power
+
+func report(monster, dist):
+	monsters[monster] = dist
