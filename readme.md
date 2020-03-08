@@ -99,12 +99,15 @@ The game
      - [x] maze
 
 7pm - 9pm
-     - [ ] lock
-     - [ ] another parkour but you have to figure out buttons combination
-  - [ ] end game
+   - [ ] lock - still in-progress
 
 9m - 11pm
+   - [ ] lock
+   - [ ] another parkour but you have to figure out buttons combination
+- [ ] end game
 - [ ] Rain does not allow to go until you get an umbrella
+
+11m - 1am
 - 3 enemies:
   - bird
     - [x] 3D model
@@ -118,22 +121,17 @@ The game
     - [x] 3D model
     - [ ] animation
     - [ ] sound
-
-11m - 1am
-- [ ] menu
-TBD
 1m - 3am
-TBD
+- [ ] menu
 
 3am - 8am sleep
 
-
 8am - 10am 
 - 2 cut scene
-  - [ ] father gives the lamp to the kid
+  - [ ] world goes into the darkness
 
 11am - 12noon
-  - [ ] world goes into the darkness
+  - [ ] father gives the lamp to the kid
 
 12noon - 2pm
 

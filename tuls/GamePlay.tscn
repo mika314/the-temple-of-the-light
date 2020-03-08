@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Lamp.glb" type="PackedScene" id=1]
 [ext_resource path="res://Terrain.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Rain.gd" type="Script" id=10]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=11]
 [ext_resource path="res://player_hurt.wav" type="AudioStream" id=12]
+[ext_resource path="res://Lock.tscn" type="PackedScene" id=13]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.724766
@@ -120,3 +121,6 @@ health = 30.0
 [node name="Bear" parent="." instance=ExtResource( 6 )]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -13.2258, 0.0490596, -71.1025 )
 ATTACK_POWER = 20.0
+
+[node name="Lock" parent="." instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -123.454, 0.194541, -75.7611 )
