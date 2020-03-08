@@ -71,9 +71,18 @@ func _input(event):
 func attack(power):
 	health -= power
 	$AudioHurt.play()
+	if health < 0:
+		$Anim.play("Death")
 
 func report(monster, dist):
 	monsters[monster] = dist
 
 func _on_Terrain_game_over():
-	$EndGame.play("EndGame")
+	$Anim.play("EndGame")
+
+
+func _on_Anim_animation_finished(anim_name):
+	if anim_name == "Death":
+		# warning-ignore:return_value_discarded
+		get_tree().change_scene("res://Menu.tscn")
+

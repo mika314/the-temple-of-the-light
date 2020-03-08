@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Lamp.glb" type="PackedScene" id=1]
 [ext_resource path="res://Terrain.tscn" type="PackedScene" id=2]
@@ -34,6 +34,22 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = PoolRealArray( 0, 1, -0.700792, 0.79249, -0.9998, 0.287339, -0.0533849, 0.0160421, 0.956205, 1, 1, 1, 0.2, 1, -0.700792, 0.542194, -0.9998, -0.140432, -0.0278564, 0.0246708, 0.989391, 1, 1, 1, 0.4, 1, -0.700792, 0.79249, -0.9998, 0.287339, -0.0533849, 0.0160421, 0.956205, 1, 1, 1 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "Death"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 90 ) ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "EndGame"
@@ -99,6 +115,21 @@ tracks/4/keys = {
 "values": [ 5.0, 5.0, 62.4 ]
 }
 
+[sub_resource type="Animation" id=6]
+resource_name = "Spawn"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0.20274, 6.61719 ) ]
+}
+
 [node name="Spatial" type="Spatial"]
 
 [node name="Rain" type="Spatial" parent="."]
@@ -137,7 +168,7 @@ script = ExtResource( 16 )
 [node name="Terrain" parent="." instance=ExtResource( 2 )]
 
 [node name="Player" type="KinematicBody" parent="."]
-transform = Transform( -0.169848, 0, -0.98547, 0, 1, 0, 0.98547, 0, -0.169848, -4.18409, 1.71052, -70.9383 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20274, 6.61719 )
 script = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Player"]
@@ -168,11 +199,13 @@ anims/Attack = SubResource( 2 )
 [node name="AudioHurt" type="AudioStreamPlayer3D" parent="Player"]
 stream = ExtResource( 12 )
 
-[node name="EndGame" type="AnimationPlayer" parent="Player"]
-anims/EndGame = SubResource( 3 )
-
 [node name="AudioNeedUmbrella" type="AudioStreamPlayer" parent="Player"]
 stream = ExtResource( 15 )
+
+[node name="Anim" type="AnimationPlayer" parent="Player"]
+anims/Death = SubResource( 5 )
+anims/EndGame = SubResource( 3 )
+anims/Spawn = SubResource( 6 )
 
 [node name="Mouse" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.976692, 0.208052, -5.91975 )
@@ -211,3 +244,4 @@ ATTACK_POWER = 20.0
 [node name="Lock" parent="." instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -123.494, 0.140009, -75.5609 )
 [connection signal="game_over" from="Terrain" to="Player" method="_on_Terrain_game_over"]
+[connection signal="animation_finished" from="Player/Anim" to="Player" method="_on_Anim_animation_finished"]

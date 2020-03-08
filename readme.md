@@ -113,17 +113,17 @@ The game
 - 3 enemies:
   - bird
     - [x] 3D model
-    - [ ] animation
+    - [ ] ~animation~
     - [x] sound
   - mouse
     - [x] 3D model
-    - [ ] animation
+    - [ ] ~animation~
     - [x] sound
   - bear
     - [x] 3D model
-    - [ ] animation
+    - [ ] ~animation~
     - [x] sound
-- [ ] menu
+- [x] menu
 
 3am - 8am sleep
 

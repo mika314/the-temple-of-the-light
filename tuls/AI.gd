@@ -40,6 +40,7 @@ func _process(delta):
 			var dir = Vector3(0, -1, -1)
 			dir = dir.rotated(Vector3(0, 1, 0), rotation.y)
 			dir = dir * MONSTER_SPEED
+
 # warning-ignore:return_value_discarded
 			move_and_slide(dir)
 		var vec = translation - player.translation
