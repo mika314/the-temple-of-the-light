@@ -106,22 +106,23 @@ The game
 - [x] another parkour ~but you have to figure out buttons combination~
 
 11m - 1am
-- [ ] end game
-- [ ] Rain does not allow to go until you get an umbrella
+- [x] end game
+- [x] Rain does not allow to go until you get an umbrella
+
+1m - 3am
 - 3 enemies:
   - bird
     - [x] 3D model
     - [ ] animation
-    - [ ] sound
+    - [x] sound
   - mouse
     - [x] 3D model
     - [ ] animation
-    - [ ] sound
+    - [x] sound
   - bear
     - [x] 3D model
     - [ ] animation
-    - [ ] sound
-1m - 3am
+    - [x] sound
 - [ ] menu
 
 3am - 8am sleep

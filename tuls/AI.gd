@@ -23,6 +23,8 @@ func _process(delta):
 		rotation.z = PI * 4 / 7
 		if isAlive:
 			$AudioDeath.play()
+			if name == "Bear":
+				$"../Umbrella".visible = true
 		isAlive = false
 		return
 	var player = $"../Player"

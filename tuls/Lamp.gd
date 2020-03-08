@@ -51,6 +51,8 @@ func _process(delta):
 
 var MOUSE_SENSITIVITY = 0.07
 
+var has_umbrella = false
+
 func _input(event):
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		var tmpRotation = $Lamp/Camera.rotation;
@@ -72,3 +74,6 @@ func attack(power):
 
 func report(monster, dist):
 	monsters[monster] = dist
+
+func _on_Terrain_game_over():
+	$EndGame.play("EndGame")
