@@ -81,6 +81,7 @@ func report(monster, dist):
 
 func _on_Terrain_game_over():
 	$Anim.play("EndGame")
+	$AudioHeavenly.play()
 
 
 func _on_Anim_animation_finished(anim_name):
